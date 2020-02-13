@@ -31,6 +31,14 @@ module.exports = {
           // Sass を CSS にコンパイルする
           'sass-loader'
         ]
+      },
+      {
+        // ローダの処理対象ファイル
+        test: /\.(png|jpg|gif)$/i,
+        // ローダーの処理対象となるディレクトリ
+        include: path.resolve(__dirname, 'src/images'),
+        // 利用するローダー
+        loader: 'url-loader'
       }
     ]
   }
